@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial;
+        font-size: 30px;
+        margin-top: 100px;
+      }
+      h1 {
+        color: red;
+      }
+      button {
+        font-size: 20px;
+        margin-top: 50px;
+        width: 100px;
+        height: 40px;
+      }
+      #no {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quer namorar comigo?</h1>
+    <button id="yes">Sim</button>
+    <button id="no">Não</button>
+    <script>
+      const yesBtn = document.querySelector('#yes');
+      yesBtn.addEventListener('click', () => {
+        window.location.href = 'https://media.giphy.com/media/3oz9ZE2Oo9zRC/giphy.gif';
+      });
+
+      const noBtn = document.querySelector('#no');
+      noBtn.addEventListener('mouseover', () => {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        noBtn.style.left = x + 'px';
+        noBtn.style.top = y + 'px';
+      });
+    </script>
+  </body>
+</html>
